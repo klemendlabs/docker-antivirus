@@ -1,4 +1,9 @@
 #!/bin/bash
+
+echo "alias ls='ls $LS_OPTIONS'" >> ~/.bashrc
+echo "alias ll='ls $LS_OPTIONS -l'" >> ~/.bashrc
+echo "alias l='ls $LS_OPTIONS -lA'" >> ~/.bashrc
+
 printf "Updating antivirus configuration ...\n"
 sed -i -e "s/{ALERT}/0/g" /usr/local/maldetect/conf.maldet
 sed -i -e "s/{EMAIL}//g" /usr/local/maldetect/conf.maldet
